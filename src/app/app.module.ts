@@ -11,8 +11,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RegisterPage } from '../pages/register/register';
+import { LoadingPage } from '../pages/loading/loading';
 
 import { Data } from '../providers/data';
+import { UserAuth } from '../providers/user-auth';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,6 +32,7 @@ const cloud_settings: CloudSettings = {
     ContactPage,
     HomePage,
     RegisterPage,
+    LoadingPage,
     TabsPage
   ],
   imports: [
@@ -45,12 +48,14 @@ const cloud_settings: CloudSettings = {
     ContactPage,
     HomePage,
     RegisterPage,
+    LoadingPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Data,
+    UserAuth,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
