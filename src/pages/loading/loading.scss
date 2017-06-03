@@ -3,6 +3,11 @@ page-loading {
 	ion-content {
 		background: color($colors, primary)!important;
 
+		h1 {
+			color: #FFF;
+			text-align: center;
+		}
+
 		/* Paralax background animation */
 		.background {
 			left: 0;

@@ -1,8 +1,12 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+import { SQLite } from '@ionic-native/sqlite';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
 import { MyApp } from './app.component';
 
@@ -56,6 +60,8 @@ const cloud_settings: CloudSettings = {
     SplashScreen,
     Data,
     UserAuth,
+    SQLite,
+    NativePageTransitions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
